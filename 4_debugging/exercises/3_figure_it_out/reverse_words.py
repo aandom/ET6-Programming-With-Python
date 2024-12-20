@@ -32,7 +32,23 @@ def reverse_words(text: str) -> str:
     words = text.split(" ")
     result = ""
     
+    # first way
     for word in words:
-        result = " " + word + result
-        
+        result = word + " " + result
+    result = result.strip(' ')
+
+    # # second way
+    # result = " ".join(words[::-1])
+
+    # # third way
+    # words.reverse()
+    # result = " ".join(words)
+
+    # # fourth way
+    # for i, word in enumerate(words):
+    #     if i == 0:
+    #         result = word + result  # Add the last word without a space
+    #     else:
+    #         result =  word + " " + result
+    
     return result
